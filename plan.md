@@ -45,4 +45,5 @@ Create a new page ✅
 - Create a new directory with the name (sale) (folder in app) ✅
 - Create a new file (page.jsx) ✅
 - Import link from 'next/link'
-- Test new page is displayed
+  ---Add a link "<Link href="/name_here"></Link>" on the homepage
+- Test new page is displayed by clicking on it
