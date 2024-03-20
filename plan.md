@@ -19,14 +19,14 @@ Clean out the components
 
 Move our components across section by section
 
-Make / copy the src folder in the root directory to nextjs
+Make / copy the src folder in the root directory to nextjs ✅
 
 - Move the container code from App.jsx to layout.js
   HTML
   CSS
 
-- Move the header file into a new folder called header
-  create a header Component file
+- Move the header file into a new folder called header ✅
+  create a header Component file ✅
   Create a header file CSS
 
 -Check it still works
