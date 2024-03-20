@@ -21,23 +21,23 @@ Move our components across section by section
 
 Make / copy the src folder in the root directory to nextjs ✅
 
-- Move the container code from App.jsx to layout.js
-  HTML
-  CSS
+- Move the container code from App.jsx to layout.js ✅
+  HTML ✅
+  CSS ✅
 
 - Move the header file into a new folder called header ✅
   create a header Component file ✅
-  Create a header file CSS
+  Create a header file CSS ✅
 
--Check it still works
+-Check it still works ✅
 
-Move the component files to a new folder
+Move the component files to a new folder ✅
 
-- Move the content
-  Component
-  CSS
+- Move the content ✅
+  Component ✅
+  CSS ✅
 
--Check it still works
+-Check it still works ✅
 
 Create a new page
 

@@ -1,7 +1,7 @@
 export default function Header(props) {
   return (
     <>
-      <header className="product_logo">
+      <header className="header">
         <h2>{props.title}</h2>
       </header>
     </>
