@@ -42,6 +42,7 @@ Move the component files to a new folder ✅
 Create a new page
 
 - Create a new directory with a name (founders)
+- Create a new directory with the name (sale) (folder in app)
 - Create a new file (page.jsx)
-
+- Import link from 'next/link'
 - Test new page is displayed
