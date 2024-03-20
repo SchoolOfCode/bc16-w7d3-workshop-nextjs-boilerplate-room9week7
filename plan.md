@@ -44,6 +44,17 @@ Create a new page ✅
 - Create a new page with a name (founders) in App ✅
 - Create a new directory with the name (sale) (folder in app) ✅
 - Create a new file (page.jsx) ✅
-- Import link from 'next/link'
-  ---Add a link "<Link href="/name_here"></Link>" on the homepage
-- Test new page is displayed by clicking on it
+- Import link from 'next/link'✅
+  ---Add a link "<Link href="/name_here"></Link>" on the homepage ✅
+- Test new page is displayed by clicking on it ✅
+
+Simple toggle on/off state Plan.
+
+- write two states for button (toggle)
+- check for each state
+- make a button
+- make button interactive
+- show a menu if state is on. hide menu if state if off
+
+- import useState from react.
+- 
