@@ -1,8 +1,8 @@
-export default function Content(props) {
+export default function Hero(props) {
   return (
     <>
-      <section className="product_content">
-        <picture className="product_image">
+      <section className="hero">
+        <picture className="hero-image">
           <img src={props.imageSrc} alt={props.imageAlt} />
         </picture>
         <h2>{props.title}</h2>

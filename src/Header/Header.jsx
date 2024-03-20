@@ -1,11 +1,11 @@
-import "react";
-import "./Header.css";
+import Link from "next/link";
 
 export default function Header(props) {
   return (
     <>
-      <header className="product_logo">
-        <a href="/founders">Founders Link</a>
+      <header className="header">
+        <h2>{props.title}</h2>
+        <Link href="/Founders">Founders</Link>
       </header>
     </>
   );
