@@ -4,6 +4,11 @@ import { useState, useEffect } from "react";
 import "./Header.css";
 
 import Link from "next/link";
+import { useState } from "react";
+export default function state () {
+  const onOffSwitch =
+}
+
 
 // When I click the on the menu icon and the menu should then appear
 // When I click the on the X icon the menu should disapear
