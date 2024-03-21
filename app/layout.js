@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "../src/Header/Header.jsx";
 import Footer from "../src/Footer/Footer.jsx";
-import Clicker from "../src/Clicker/Clicker.jsx";
+import { useClient } from "next/client";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,12 +14,13 @@ export const metadata = {
 };
 
 export default function RootLayout() {
+  useClient();
   return (
     <html lang="en">
       <body className={inter.className}>
         <div className="container">
           <Header title="Fireplace Palace" />
-          <Clicker />
+
           <Footer />
         </div>
       </body>
