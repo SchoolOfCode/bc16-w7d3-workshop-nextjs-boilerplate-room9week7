@@ -3,27 +3,26 @@
 import React, { useState, useEffect } from "react";
 
 export default function Reviews() {
-  const [resourceType, setResourceType] = useState("england");
-  const [items, setItems] = useState([]);
+  const [country, countryReviews] = useState("england");
 
   console.log("render");
 
   useEffect(() => {
     fetch(
-      `https://seal-app-336e8.ondigitalocean.app/reviews?country=${resourceType}`
+      `https://seal-app-336e8.ondigitalocean.app/reviews?country=${country}`
     )
       .then((response) => response.json())
       .then((json) => console.log(json));
-  }, [resourceType]);
+  }, [country]);
 
   return (
     <>
       <div>
-        <button onClick={() => setResourceType("england")}>England</button>
-        <button onClick={() => setResourceType("scotland")}>Scotland</button>
-        <button onClick={() => setResourceType("wales")}>Wales</button>
+        <button onClick={() => countryReviews("england")}>England</button>
+        <button onClick={() => countryReviews("scotland")}>Scotland</button>
+        <button onClick={() => countryReviews("wales")}>Wales</button>
       </div>
-      <h1>{resourceType}</h1>
+      <h1>{country}</h1>
       
     </>
   );
