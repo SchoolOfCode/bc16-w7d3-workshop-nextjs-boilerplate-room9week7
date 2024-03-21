@@ -4,11 +4,6 @@ import { useState, useEffect } from "react";
 import "./Header.css";
 
 import Link from "next/link";
-import { useState } from "react";
-export default function state () {
-  const onOffSwitch =
-}
-
 
 // When I click the on the menu icon and the menu should then appear
 // When I click the on the X icon the menu should disapear
@@ -63,9 +58,8 @@ export default function Header() {
           </div>
         ) : null}
       </header>
-
-      {/* <Link href="/">Home</Link> */}
-      {/* <Link href="/founders">Founders</Link> */}
+      /* <Link href="/">Home</Link> */ /* <Link href="/founders">Founders</Link>{" "}
+      */
     </>
   );
 }
