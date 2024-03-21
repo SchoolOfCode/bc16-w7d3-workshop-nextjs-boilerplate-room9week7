@@ -10,7 +10,7 @@ export default function Home() {
         imageSrc={"images/hero-mobile.png"}
         imageAlt={"Alt text for the image"}
         title={"Discover the Perfect Fireplace....."}
-        paragraph={"Book consultation 01245562"}
+        paragraph={"Book consultation:"}
       />
 
       <Title title={"How it works."} />

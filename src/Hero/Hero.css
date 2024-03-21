@@ -1,0 +1,11 @@
+.hero {
+  background-color: #f0911b;
+}
+
+.hero p {
+  font-size: 15px;
+}
+
+.hero .consultation {
+  color: white;
+}
