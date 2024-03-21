@@ -9,8 +9,7 @@ export const metadata = {
   description: "Lovely Fireplaces",
 };
 
-export default function RootLayout() {
-  useClient();
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
