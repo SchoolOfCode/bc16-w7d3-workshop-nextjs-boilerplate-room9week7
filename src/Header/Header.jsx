@@ -58,8 +58,8 @@ export default function Header() {
           </div>
         ) : null}
       </header>
-      /* <Link href="/">Home</Link> */ /* <Link href="/founders">Founders</Link>{" "}
-      */
+      <Link href="/">Home</Link>
+      <Link href="/founders">Founders</Link>
     </>
   );
 }
