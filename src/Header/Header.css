@@ -1,4 +1,19 @@
+@media (min-width: 1024px;) {
+}
+
 .header {
   display: flex;
   align-items: left; /* This centers the content vertically */
+}
+
+.mobile-menu {
+  background: blue;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
