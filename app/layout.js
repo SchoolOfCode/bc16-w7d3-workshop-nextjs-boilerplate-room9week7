@@ -1,8 +1,10 @@
+import React from "react";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "../src/Header/Header.jsx";
 import Footer from "../src/Footer/Footer.jsx";
 const inter = Inter({ subsets: ["latin"] });
+import Clicker from "../src/Clicker/Clicker.jsx";
 
 export const metadata = {
   title: "Create Next App",
@@ -15,8 +17,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div className="container">
           <Header title="Fireplace Palace" />
-
-          {children}
+          <Clicker onClick={handleClick} />
 
           <Footer />
         </div>
