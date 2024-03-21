@@ -3,10 +3,10 @@ export default function Content(props) {
     <>
       <section className="product_content">
         <picture className="product_image">
-          <img src={props.imageSrc} alt={props.imageAlt} />
+          <img src={props.img} alt={props.alt} />
         </picture>
         <h2>{props.title}</h2>
-        <p>{props.paragraph}</p>
+        <p>{props.text}</p>
       </section>
     </>
   );
