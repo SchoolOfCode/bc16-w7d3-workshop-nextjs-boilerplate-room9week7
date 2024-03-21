@@ -1,9 +1,6 @@
 .hero {
   background-color: #f0911b;
-}
-
-.hero p {
-  font-size: 15px;
+  text-align: left;
 }
 
 .hero .consultation {

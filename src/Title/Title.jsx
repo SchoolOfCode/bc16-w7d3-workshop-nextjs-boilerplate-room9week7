@@ -1,10 +1,10 @@
 import "./Title.css";
 
-export default function Title(props) {
+export default function Title() {
   return (
     <>
       <section className="title">
-        <h2>{props.title}</h2>
+        <h2>How it works.</h2>
       </section>
     </>
   );

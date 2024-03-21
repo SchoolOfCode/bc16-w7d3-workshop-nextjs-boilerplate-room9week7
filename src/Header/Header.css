@@ -1,4 +1,4 @@
-h3 {
-  text-align: left; /* Align to the left */
-  font-size: 10px; /* Specify the font size */
+.header {
+  display: flex;
+  align-items: left; /* This centers the content vertically */
 }

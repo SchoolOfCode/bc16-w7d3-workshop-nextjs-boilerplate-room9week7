@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <Hero />
 
-      <Title title={"How it works."} />
+      <Title />
 
       {/* Render a separate Content component for each item in ContentObject */}
       {ContentObject.map((item, index) => (
