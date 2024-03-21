@@ -20,6 +20,7 @@ export default function RootLayout() {
       <body className={inter.className}>
         <div className="container">
           <Header title="Fireplace Palace" />
+          <Footer />
 
           <Footer />
         </div>
