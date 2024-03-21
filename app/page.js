@@ -3,6 +3,7 @@ import Hero from "../src/Hero/Hero.jsx";
 import Title from "../src/Title/Title.jsx";
 import Content from "../src/Content/Content.jsx";
 import { ContentObject } from "../src/Content/ContentObject";
+import Reviews from "../src/Reviews/Reviews.jsx";
 
 export default function Home() {
   return (
@@ -10,6 +11,8 @@ export default function Home() {
       <Hero />
 
       <Title />
+
+      <Reviews />
 
       {/* Render a separate Content component for each item in ContentObject */}
       {ContentObject.map((item, index) => (
