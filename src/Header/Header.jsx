@@ -51,17 +51,16 @@ export default function Header() {
       <header className="header">
         <h3>🔥Fireplace Palace</h3>
 
-        <button onClick={handleClick}>
-          <Link href="/">Home</Link>
-        </button>
+        <button onClick={handleClick}></button>
         {menuToggle ? (
           <div className="mobile-menu">
             <button onClick={handleClick}>Close Menu</button>
           </div>
         ) : null}
-
-        <Link href="/founders">Founders</Link>
       </header>
+
+      {/* <Link href="/">Home</Link> */}
+      {/* <Link href="/founders">Founders</Link> */}
     </>
   );
 }
