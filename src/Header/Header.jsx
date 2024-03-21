@@ -33,7 +33,7 @@ import Link from "next/link";
 // run the useEffect when menuToggle changes
 // check what the state actually is before we log (only run when true)
 
-export default function Header(props) {
+export default function Header() {
   const [menuToggle, setMenuToggle] = useState(false);
 
   useEffect(() => {
@@ -50,19 +50,17 @@ export default function Header(props) {
     <>
       <header className="header">
         <h3>🔥Fireplace Palace</h3>
-        <p>
-          <button onClick={handleClick}>
-            <Link href="/">Home</Link>
-          </button>
-          {menuToggle ? (
-            <div className="mobile-menu">
-              <button onClick={handleClick}>Close Menu</button>
-            </div>
-          ) : null}
-        </p>
-        <p>
-          <Link href="/founders">Founders</Link>
-        </p>
+
+        <button onClick={handleClick}>
+          <Link href="/">Home</Link>
+        </button>
+        {menuToggle ? (
+          <div className="mobile-menu">
+            <button onClick={handleClick}>Close Menu</button>
+          </div>
+        ) : null}
+
+        <Link href="/founders">Founders</Link>
       </header>
     </>
   );
