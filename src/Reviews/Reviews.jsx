@@ -4,15 +4,14 @@ import React, { useState, useEffect } from "react";
 
 export default function Reviews() {
   const [country, countryReviews] = useState("england");
-
-  console.log("render");
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
     fetch(
       `https://seal-app-336e8.ondigitalocean.app/reviews?country=${country}`
     )
       .then((response) => response.json())
-      .then((json) => console.log(json));
+      .then((json) => setItems(json));
   }, [country]);
 
   return (
@@ -23,7 +22,7 @@ export default function Reviews() {
         <button onClick={() => countryReviews("wales")}>Wales</button>
       </div>
       <h1>{country}</h1>
-      
+      <p>{JSON.stringify(items)}</p>
     </>
   );
 }
