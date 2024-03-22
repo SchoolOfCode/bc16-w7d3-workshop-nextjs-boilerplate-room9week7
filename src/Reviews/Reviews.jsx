@@ -4,14 +4,20 @@ import React, { useState, useEffect } from "react";
 
 export default function Reviews() {
   const [country, countryReviews] = useState("england");
-  const [items, setItems] = useState([]);
+  const [reviewData, setReviewData] = useState(null);
 
   useEffect(() => {
     fetch(
       `https://seal-app-336e8.ondigitalocean.app/reviews?country=${country}`
     )
       .then((response) => response.json())
-      .then((json) => setItems(json));
+      .then((data) => {
+        console.log(data); // Logging the fetched data
+        setReviewData(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
   }, [country]);
 
   return (
@@ -22,7 +28,15 @@ export default function Reviews() {
         <button onClick={() => countryReviews("wales")}>Wales</button>
       </div>
       <h1>{country}</h1>
-      <p>{JSON.stringify(items)}</p>
+      {reviewData && (
+        <div>
+          <p>{reviewData.author}</p>
+          <p>{reviewData.businessName}</p>
+          <p>{reviewData.location}</p>
+          <p>{reviewData.text}</p>
+          {/* Render additional properties as needed */}
+        </div>
+      )}
     </>
   );
 }
