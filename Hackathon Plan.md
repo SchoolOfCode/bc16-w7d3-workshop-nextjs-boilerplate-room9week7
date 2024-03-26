@@ -12,9 +12,9 @@ https://drive.google.com/drive/folders/1Eph6VPm61o-lQQXxExr3E0T6o4Pv2Lsi?usp=sha
 
 - Watch the video again! https://youtu.be/0ZJgIjIuY7U ✅
 - Make the new "Reviews" component ✅
-- h1 - Trusted - MVP3
-- h2 - Description - MVP3
-- make 3 buttons - MVP3
+- h1 - Trusted - MVP2 ✅
+- h2 - Description - MVP2 ✅
+- make 3 buttons - MVP2✅
 - Make a CSS file for that component and style the above - MVP3
 
 # States
@@ -33,12 +33,12 @@ https://drive.google.com/drive/folders/1Eph6VPm61o-lQQXxExr3E0T6o4Pv2Lsi?usp=sha
 
 # User Flow
 
-- Someone clicks a button which changes the state of "selectedCountry". 
-- Having "selectedCountry" change (useEffect dependencies) could trigger a useEffect hook to run. 
-- That useEffect could run a fetch request.
-- Pass the "selectedCountry" as part of the request so you make a request that asks for data specific to that country.
-- Once the data returns from fetch - store it in the second bit of state that is meant to hold reviews.
-- The component will re-render and show the right review.
+- Someone clicks a button which changes the state of "selectedCountry". ✅
+- Having "selectedCountry" change (useEffect dependencies) could trigger a useEffect hook to run. ✅
+- That useEffect could run a fetch request.✅
+- Pass the "selectedCountry" as part of the request so you make a request that asks for data specific to that country.✅
+- Once the data returns from fetch - store it in the second bit of state that is meant to hold reviews.✅
+- The component will re-render and show the right review.✅
 
 # Pitfalls
 
