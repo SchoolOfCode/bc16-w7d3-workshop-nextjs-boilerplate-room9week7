@@ -1,7 +1,7 @@
-// import ".form.css"; //Import CSS styles
-import { useState } from "next/client"; //Import useState hook from React
+"use client";
+import { useState } from "react"; //Import useState hook from React
 
-export default function Form() {
+export default function Forms() {
   const [fullName, setFullName] = useState(""); //state variable for full name
   const [postcode, setPostcode] = useState(""); //state variable for postcode
   const [houseNumber, setHouseNumber] = useState(""); //state variable for house/flat number
@@ -40,6 +40,7 @@ export default function Form() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log("Full name:", fullName);
     // handle form submission logic
   };
 

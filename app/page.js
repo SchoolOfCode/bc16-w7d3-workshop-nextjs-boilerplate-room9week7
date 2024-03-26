@@ -5,13 +5,14 @@ import Content from "../src/Content/Content.jsx";
 import { ContentObject } from "../src/Content/ContentObject";
 import Reviews from "../src/Reviews/Reviews.jsx";
 
+import Forms from "../src/Forms/Forms.jsx"; // Import path relative to the current directory
+
 export default function Home() {
   return (
     <>
       <Hero />
-
       <Title />
-
+      <Forms />
       <Reviews />
 
       {/* Render a separate Content component for each item in ContentObject */}
