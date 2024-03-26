@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 
 export default function Reviews() {
   //state variables that manages the selected country and review data.
-  const [country, countryReviews] = useState("england");
+  const [country, countryReviews] = useState("");
   const [reviewData, setReviewData] = useState(null);
 
   // Fetch review data when country changes
