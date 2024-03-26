@@ -12,12 +12,12 @@ Once you it's all connected think about validation. You are already capturing th
 
 PLAN
 
-1. Create a link on the home page saying "Book Consultation" (Should not see phone number anymore)
-   Users should be able to click the link and go to a "Booking" page ("/booking")
+1. Create a link on the home page saying "Book Consultation" (Should not see phone number anymore) ✅
+   Users should be able to click the link and go to a "Booking" page ("/booking") ✅
 
--> Create a new page called Booking in App
--> Create a new file called page.jsx
--> Import link from "next/link" --- Add link in the headers link instead of the phone number
+-> Create a new page called Booking in App ✅
+-> Create a new file called page.jsx ✅
+-> Import link from "next/link" --- Add link in the headers link instead of the phone number ✅
 
 2. When a user reaches the "Booking" page they should see a simple form that matches the designs you've been given.
 
