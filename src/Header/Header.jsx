@@ -60,6 +60,7 @@ export default function Header() {
       </header>
       <Link href="/">Home</Link>
       <Link href="/founders">Founders</Link>
+      <Link href="/booking">Book consultation</Link>
     </>
   );
 }
