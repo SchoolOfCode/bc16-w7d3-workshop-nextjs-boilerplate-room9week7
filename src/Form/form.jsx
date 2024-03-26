@@ -61,7 +61,7 @@ export default function Form() {
           <label>
             Postcode:
             <input
-              type="text"
+              type="text "
               value={postcode}
               onChange={handlePostcodeChange}
             />
