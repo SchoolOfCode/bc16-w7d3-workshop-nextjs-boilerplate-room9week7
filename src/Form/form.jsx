@@ -40,7 +40,7 @@ export default function Form() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // You can handle form submission logic here
+    // handle form submission logic
   };
 
   return (
@@ -114,6 +114,3 @@ export default function Form() {
     </form>
   );
 }
-//   Seperated by Contact Information h1 title
-//   -> Phone number, Email Address
-//   Below this there is a button called Request Design Consultation
