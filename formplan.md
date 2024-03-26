@@ -21,10 +21,19 @@ PLAN
 
 2. When a user reaches the "Booking" page they should see a simple form that matches the designs you've been given.
 
--> Create a new folder (Form) and file (Form.jsx)
--> Import dependancies (useState)
--> Create form component (create another when needed)
+-> Create a new folder (Form) and file (Form.jsx) ✅
+-> Import dependancies (useState) ✅
 -> Break down the design and work from this
+-> make state variables ✅
+-> Full Name, Postcode, House/Flat Number and Street Name,
+City✅
+Seperated by Contact Information h1 title ✅
+-> Phone number, Email Address ✅
+Below this there is a button called Request Design Consultation
+-> Create form component (create another when needed)
+-> Build out the form for one input initially to check it works
+-> Event handler for Full name input change and update the state
+-> Build form component
 ->
 
 3. When a user submits the form it should validate that no fields are empty.
