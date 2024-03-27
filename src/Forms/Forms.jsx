@@ -14,31 +14,39 @@ export default function Forms() {
   // Event handlers for updating state variables
 
   const handleFullNameChange = (event) => {
-    setFullName(event.target.value);
+    if (event.target.name === "fullName") {
+      setFullName(event.target.value);
+      console.log(fullName);
+    }
   };
 
   const handlePostcodeChange = (event) => {
-    setPostcode(event.target.value);
+    if (event.target.name === "postcode") {
+      setPostcode(event.target.value);
+      console.log(postcode);
+    }
   };
 
   const handleHouseNumberChange = (event) => {
-    setHouseNumber(event.target.value);
+    if (event.target.name === "houseNumber") setHouseNumber(event.target.value);
+    console.log(houseNumber);
   };
 
   const handleStreetNameChange = (event) => {
-    setStreetName(event.target.value);
+    if (event.target.name === "streetName") setStreetName(event.target.value);
   };
 
   const handleCityChange = (event) => {
-    setCity(event.target.value);
+    if (event.target.name === "city") setCity(event.target.value);
   };
 
   const handlePhoneNumberChange = (event) => {
-    setPhoneNumber(event.target.value);
+    if (event.target.name === "phoneNumber") setPhoneNumber(event.target.value);
   };
 
   const handleEmailChange = (event) => {
-    setEmail(event.target.value);
+    if (event.target.name === "email") setEmail(event.target.value);
+    console.log(email);
   };
 
   const handleSubmit = (event) => {
@@ -54,6 +62,7 @@ export default function Forms() {
           <label>
             Full Name:
             <input
+              name="fullName"
               type="text"
               value={fullName}
               onChange={handleFullNameChange}
@@ -64,6 +73,7 @@ export default function Forms() {
           <label>
             Postcode:
             <input
+              name="postcode"
               type="text"
               value={postcode}
               onChange={handlePostcodeChange}
@@ -74,6 +84,7 @@ export default function Forms() {
           <label>
             House/Flat Number:
             <input
+              name="houseNumber"
               type="text"
               value={houseNumber}
               onChange={handleHouseNumberChange}
@@ -84,6 +95,7 @@ export default function Forms() {
           <label>
             Street Name:
             <input
+              name="streetName"
               type="text"
               value={streetName}
               onChange={handleStreetNameChange}
@@ -93,13 +105,19 @@ export default function Forms() {
         <li>
           <label>
             City:
-            <input type="text" value={city} onChange={handleCityChange} />
+            <input
+              name="city"
+              type="text"
+              value={city}
+              onChange={handleCityChange}
+            />
           </label>
         </li>
         <li>
           <label>
             Phone Number:
             <input
+              name="phoneNumber"
               type="text"
               value={phoneNumber}
               onChange={handlePhoneNumberChange}
@@ -109,7 +127,12 @@ export default function Forms() {
         <li>
           <label>
             Email Address:
-            <input type="text" value={email} onChange={handleEmailChange} />
+            <input
+              name="email"
+              type="text"
+              value={email}
+              onChange={handleEmailChange}
+            />
           </label>
         </li>
       </ul>
