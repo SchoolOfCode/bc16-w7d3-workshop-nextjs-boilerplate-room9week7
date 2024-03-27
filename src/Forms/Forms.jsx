@@ -1,4 +1,4 @@
-// import ".form.css"; //Import CSS styles
+// import ".form.css"; //Import CSS styles from css
 import { useState } from "next/client"; //Import useState hook from React
 
 export default function Form() {
