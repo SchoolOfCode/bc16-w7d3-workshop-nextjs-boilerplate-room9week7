@@ -1,10 +1,10 @@
 import "./page.css";
-import Form from "../Form/form.jsx";
+import Forms from "../../src/Forms/Forms.jsx"; // Import path relative to the current directory
 
 export default function Booking() {
   return (
     <>
-      <Form />
+      <Forms />
       <h1>Booking</h1>;
     </>
   );

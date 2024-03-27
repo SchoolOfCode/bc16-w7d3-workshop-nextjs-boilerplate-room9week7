@@ -9,9 +9,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-
       <Title />
-
       <Reviews />
 
       {/* Render a separate Content component for each item in ContentObject */}
