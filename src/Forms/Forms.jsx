@@ -2,8 +2,9 @@
 // import ".form.css"; //Import CSS styles from css
 import React, { useReducer } from "react"; // Don't forget to import React
 
-function formReducer(state, action) {
-  switch (action.type) {
+function reducer(state, action) {
+
+  switch(action.type){
     case "NAME_CHANGED":
     // return a new state with that one prperty changed
       let newState = {...state};
@@ -14,19 +15,23 @@ function formReducer(state, action) {
 
 
 
-    case "EMAIL_CHANGED":
+    case "POSTCODE_CHANGED":
       // return a new state with that one prperty changed
-      let newStateTwo = { ...state };
-      newStateTwo.email = action.payload.newEmailValue;
+      let newStateTwo = {...state};
+      newStateTwo.email = action.payload.newPostcodeValue;
+      console.log(newStateTwo)
       return newStateTwo;
-    default:
+   
+      default:
+   
       return state;
   }
 
 }
 
 export default function Forms() {
-  const [formState, dispatch] = useReducer(formReducer, {
+
+  const initState = {
     fullName: "",
     postcode: "",
     houseNumber: "",
@@ -37,31 +42,37 @@ export default function Forms() {
     errorStatus: false,
   };
 
+  const [state, dispatchEvent] = useReducer(reducer, initState);
+
   // Event handlers for updating state variables
 
   const handleFullNameChange = (event) => {
     if (event.target.name === "fullName") {
       // setFullName(event.target.value);
       dispatchEvent({
-        type: "NAME_CHANGED",
+        type: 'NAME_CHANGED',
         payload: {
-          newNameValue: event.target.value
+        newNameValue: event.target.value
         }
       })
-      console.log(fullName);
     }
   };
 
   const handlePostcodeChange = (event) => {
     if (event.target.name === "postcode") {
-      setPostcode(event.target.value);
-      console.log(postcode);
+      // setFullName(event.target.value);
+      dispatchEvent({
+        type: 'POSTCODE_CHANGED',
+        payload: {
+        newPostcodeValue: event.target.value
+        }
+      })
     }
   };
 
   const handleHouseNumberChange = (event) => {
     if (event.target.name === "houseNumber") setHouseNumber(event.target.value);
-    console.log(houseNumber);
+   
   };
 
   const handleStreetNameChange = (event) => {
@@ -96,7 +107,7 @@ export default function Forms() {
             <input
               name="fullName"
               type="text"
-              value={fullName}
+              value={state.fullName}
               onChange={handleFullNameChange}
             />
           </label>
@@ -107,7 +118,7 @@ export default function Forms() {
             <input
               name="postcode"
               type="text"
-              value={postcode}
+              value={state.postcode}
               onChange={handlePostcodeChange}
             />
           </label>
@@ -118,7 +129,7 @@ export default function Forms() {
             <input
               name="houseNumber"
               type="text"
-              value={houseNumber}
+              value={state.houseNumber}
               onChange={handleHouseNumberChange}
             />
           </label>
@@ -129,7 +140,7 @@ export default function Forms() {
             <input
               name="streetName"
               type="text"
-              value={streetName}
+              value={state.streetName}
               onChange={handleStreetNameChange}
             />
           </label>
@@ -140,7 +151,7 @@ export default function Forms() {
             <input
               name="city"
               type="text"
-              value={city}
+              value={state.city}
               onChange={handleCityChange}
             />
           </label>
@@ -151,7 +162,7 @@ export default function Forms() {
             <input
               name="phoneNumber"
               type="text"
-              value={phoneNumber}
+              value={state.phoneNumber}
               onChange={handlePhoneNumberChange}
             />
           </label>
@@ -162,7 +173,7 @@ export default function Forms() {
             <input
               name="email"
               type="text"
-              value={email}
+              value={state.email}
               onChange={handleEmailChange}
             />
           </label>
