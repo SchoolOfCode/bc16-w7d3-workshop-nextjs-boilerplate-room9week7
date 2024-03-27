@@ -1,7 +1,8 @@
+"use client";
 // import ".form.css"; //Import CSS styles from css
-import { useState } from "next/client"; //Import useState hook from React
+import { useState } from "react"; //Import useState hook from React
 
-export default function Form() {
+export default function Forms() {
   const [fullName, setFullName] = useState(""); //state variable for full name
   const [postcode, setPostcode] = useState(""); //state variable for postcode
   const [houseNumber, setHouseNumber] = useState(""); //state variable for house/flat number
