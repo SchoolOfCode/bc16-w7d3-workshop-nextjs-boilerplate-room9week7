@@ -10,6 +10,8 @@ export default function Forms() {
   const [phoneNumber, setPhoneNumber] = useState(""); //state variable for phone number
   const [email, setEmail] = useState(""); //state variable for email address
 
+  // Event handlers for updating state variables
+
   const handleFullNameChange = (event) => {
     setFullName(event.target.value);
   };
@@ -37,6 +39,8 @@ export default function Forms() {
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
+
+  // Event handler for form submission
 
   const handleSubmit = (event) => {
     event.preventDefault();
