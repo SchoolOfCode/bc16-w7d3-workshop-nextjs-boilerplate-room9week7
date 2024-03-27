@@ -2,6 +2,24 @@
 // import ".form.css"; //Import CSS styles from css
 import React, { useReducer } from "react"; // Don't forget to import React
 
+function reducer(state, action) {
+
+  switch(action.type){
+    case "NAME_CHANGED":
+    // return a new state with that one prperty changed
+      let newState = {...state};
+      newState.fullName = action.payload.fullName;
+      return newState;
+    case "EMAIL_CHANGED":
+      // return a new state with that one prperty changed
+      let newStateTwo = {...state};
+      newStateTwo.email = action.payload.newEmailValue;
+      return newStateTwo;
+    default:
+        return state;
+  }
+}
+
 export default function Forms() {
 
   const initState = {
@@ -19,7 +37,13 @@ export default function Forms() {
 
   const handleFullNameChange = (event) => {
     if (event.target.name === "fullName") {
-      setFullName(event.target.value);
+      // setFullName(event.target.value);
+      dispatchEvent({
+        type: 'NAME_CHANGED',
+        payload: {
+          newNameValue: event.target.value
+        }
+      })
       console.log(fullName);
     }
   };
