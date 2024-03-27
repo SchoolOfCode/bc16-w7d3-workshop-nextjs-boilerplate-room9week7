@@ -2,9 +2,8 @@
 // import ".form.css"; //Import CSS styles from css
 import React, { useReducer } from "react"; // Don't forget to import React
 
-function reducer(state, action) {
-
-  switch(action.type){
+function formReducer(state, action) {
+  switch (action.type) {
     case "NAME_CHANGED":
     // return a new state with that one prperty changed
       let newState = {...state};
@@ -17,18 +16,17 @@ function reducer(state, action) {
 
     case "EMAIL_CHANGED":
       // return a new state with that one prperty changed
-      let newStateTwo = {...state};
+      let newStateTwo = { ...state };
       newStateTwo.email = action.payload.newEmailValue;
       return newStateTwo;
     default:
-        return state;
+      return state;
   }
 
 }
 
 export default function Forms() {
-
-  const initState = {
+  const [formState, dispatch] = useReducer(formReducer, {
     fullName: "",
     postcode: "",
     houseNumber: "",
@@ -39,17 +37,15 @@ export default function Forms() {
     errorStatus: false,
   };
 
-  const [state, dispatchEvent] = useReducer(reducer, initState);
-
   // Event handlers for updating state variables
 
   const handleFullNameChange = (event) => {
     if (event.target.name === "fullName") {
       // setFullName(event.target.value);
       dispatchEvent({
-        type: 'NAME_CHANGED',
+        type: "NAME_CHANGED",
         payload: {
-        newNameValue: event.target.value
+          newNameValue: event.target.value
         }
       })
       console.log(fullName);
@@ -100,7 +96,7 @@ export default function Forms() {
             <input
               name="fullName"
               type="text"
-              value={state.fullName}
+              value={fullName}
               onChange={handleFullNameChange}
             />
           </label>
@@ -111,7 +107,7 @@ export default function Forms() {
             <input
               name="postcode"
               type="text"
-              value={state.postcode}
+              value={postcode}
               onChange={handlePostcodeChange}
             />
           </label>
@@ -122,7 +118,7 @@ export default function Forms() {
             <input
               name="houseNumber"
               type="text"
-              value={state.houseNumber}
+              value={houseNumber}
               onChange={handleHouseNumberChange}
             />
           </label>
@@ -133,7 +129,7 @@ export default function Forms() {
             <input
               name="streetName"
               type="text"
-              value={state.streetName}
+              value={streetName}
               onChange={handleStreetNameChange}
             />
           </label>
@@ -144,7 +140,7 @@ export default function Forms() {
             <input
               name="city"
               type="text"
-              value={state.city}
+              value={city}
               onChange={handleCityChange}
             />
           </label>
@@ -155,7 +151,7 @@ export default function Forms() {
             <input
               name="phoneNumber"
               type="text"
-              value={state.phoneNumber}
+              value={phoneNumber}
               onChange={handlePhoneNumberChange}
             />
           </label>
@@ -166,7 +162,7 @@ export default function Forms() {
             <input
               name="email"
               type="text"
-              value={state.email}
+              value={email}
               onChange={handleEmailChange}
             />
           </label>
