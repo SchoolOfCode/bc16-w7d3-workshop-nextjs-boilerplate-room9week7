@@ -10,7 +10,7 @@ export default function Forms() {
   const [phoneNumber, setPhoneNumber] = useState(""); //state variable for phone number
   const [email, setEmail] = useState(""); //state variable for email address
 
-  // Event handlers for updating state variables
+  // Event handlers for updating state variabless
 
   const handleFullNameChange = (event) => {
     setFullName(event.target.value);
