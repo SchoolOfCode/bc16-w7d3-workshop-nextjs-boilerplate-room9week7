@@ -13,12 +13,10 @@ function reducer(state, action) {
       console.log(newState)
       return newState;
 
-
-
     case "POSTCODE_CHANGED":
       // return a new state with that one prperty changed
       let newStateTwo = {...state};
-      newStateTwo.email = action.payload.newPostcodeValue;
+      newStateTwo.postcode = action.payload.newPostcodeValue;
       console.log(newStateTwo)
       return newStateTwo;
    
