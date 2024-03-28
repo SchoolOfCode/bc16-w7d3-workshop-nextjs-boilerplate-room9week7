@@ -1,8 +1,7 @@
 "use client";
 import React, { useReducer } from "react";
-import { useForm } from 'react-hook-form';
 
-export default function Form() {
+export default function ContactForm() {
   const initState = {
     data: {
       fullName: "",
@@ -14,6 +13,7 @@ export default function Form() {
       email: "",
     },
     errorStatus: false,
+    isSubmitting: false, // Add a new state property for form submission status
   };
 
   function reducer(state, action) {
@@ -33,62 +33,77 @@ export default function Form() {
         console.log(newState);
         return newState;
 
-        // dont forget your breaks - important
-        break;
+      // don't forget your breaks - important
+      // removed the break statement here as it is unreachable after the return statement
+
+      case "SUBMIT_STARTED":
+        return { ...state, isSubmitting: true }; // Set isSubmitting to true
 
       default:
         return state;
     }
   }
 
-  function ContactForm() {
-    const [state, dispatch] = useReducer(reducer, initState);
+  const [state, dispatch] = useReducer(reducer, initState);
 
-    const handleChange = (e) => {
-      dispatch({
-        type: "CHANGE_FORM_DATA",
-        payload: {
-          name: e.target.name,
-          value: e.target.value,
-        },
-      });
-    };
-
-    return (
-      <form>
-        <ul>
-          <li>
-            <label>Full Name: </label>
-            <input type="text" name="fullName" onChange={handleChange} />
-          </li>
-          <li>
-            <label>Post Code: </label>
-            <input type="text" name="postCode" onChange={handleChange} />
-          </li>
-          <li>
-          <label>House Number: </label>
-          <input type="text" name="houseNumber" onChange={handleChange} />
-          </li>
-          <li>
-          <label>Street Name: </label>
-          <input type="text" name="streetName" onChange={handleChange} />
-          </li>
-          <li>
-            <label>City: </label>
-            <input type="text" name="city" onChange={handleChange} />
-          </li>
-          <li>
-            <label>Phone Number: </label>
-            <input type="text" name="phoneNumber" onChange={handleChange} />
-          </li>
-          <li>
-            <label>Email Address: </label>
-            <input type="text" name="email" onChange={handleChange} />
-          </li>
-        </ul>
-      </form>
-    );
+  function handleChange(event) {
+    dispatch({
+      type: "CHANGE_FORM_DATA",
+      payload: {
+        name: event.target.name,
+        value: event.target.value,
+      },
+    });
   }
 
-  return <ContactForm />;
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    dispatch({ type: 'SUBMIT_STARTED' });
+    // Simulate form submission (you can replace this with your actual API call)
+    setTimeout(() => {
+      // Handle form submission success or failure
+      // ...
+      dispatch({ type: 'SUBMIT_COMPLETED' }); // Set isSubmitting back to false
+    }, 2000); // Simulating a delay
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <ul>
+        <li>
+          <label>Full Name: </label>
+          <input type="text" name="fullName" onChange={handleChange} />
+        </li>
+        <li>
+          <label>Post Code: </label>
+          <input type="text" name="postCode" onChange={handleChange} />
+        </li>
+        <li>
+          <label>House Number: </label>
+          <input type="text" name="houseNumber" onChange={handleChange} />
+        </li>
+        <li>
+          <label>Street Name: </label>
+          <input type="text" name="streetName" onChange={handleChange} />
+        </li>
+        <li>
+          <label>City: </label>
+          <input type="text" name="city" onChange={handleChange} />
+        </li>
+        <li>
+          <label>Phone Number: </label>
+          <input type="text" name="phoneNumber" onChange={handleChange} />
+        </li>
+        <li>
+          <label>Email Address: </label>
+          <input type="text" name="email" onChange={handleChange} />
+        </li>
+        <li>
+          <button type="submit">Request Design Consultation</button>
+          <p></p> {/* Corrected the empty paragraph tag */}
+        </li>
+      </ul>
+      {state.isSubmitting && <p>Form Submitting...</p>} {/* Display message when submitting */}
+    </form>
+  );
 }
