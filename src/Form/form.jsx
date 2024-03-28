@@ -37,6 +37,7 @@ export default function ContactForm() {
       // removed the break statement here as it is unreachable after the return statement
 
       case "SUBMIT_STARTED":
+        console.log("Form is submitting")
         return { ...state, isSubmitting: true }; // Set isSubmitting to true
 
       default:
