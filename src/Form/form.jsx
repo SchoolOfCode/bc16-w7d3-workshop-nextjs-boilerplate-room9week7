@@ -1,11 +1,12 @@
 "use client";
 import React, { useReducer } from "react";
+import { useForm } from 'react-hook-form';
 
 export default function Form() {
   const initState = {
     data: {
       fullName: "",
-      postcode: "",
+      postCode: "",
       houseNumber: "",
       streetName: "",
       city: "",
@@ -54,106 +55,40 @@ export default function Form() {
     };
 
     return (
-      <div>
-        <label>Full Name: </label>
-        <input
-          type="text"
-          name="fullName"
-          value={state.fullName}
-          onChange={handleChange}
-        />
-        <label>Post Code: </label>
-        <input
-          type="text"
-          name="postcode"
-          value={state.postcode}
-          onChange={handleChange}
-        />
-        {/* Add other input fields similarly */}
-      </div>
+      <form>
+        <ul>
+          <li>
+            <label>Full Name: </label>
+            <input type="text" name="fullName" onChange={handleChange} />
+          </li>
+          <li>
+            <label>Post Code: </label>
+            <input type="text" name="postCode" onChange={handleChange} />
+          </li>
+          <li>
+          <label>House Number: </label>
+          <input type="text" name="houseNumber" onChange={handleChange} />
+          </li>
+          <li>
+          <label>Street Name: </label>
+          <input type="text" name="streetName" onChange={handleChange} />
+          </li>
+          <li>
+            <label>City: </label>
+            <input type="text" name="city" onChange={handleChange} />
+          </li>
+          <li>
+            <label>Phone Number: </label>
+            <input type="text" name="phoneNumber" onChange={handleChange} />
+          </li>
+          <li>
+            <label>Email Address: </label>
+            <input type="text" name="email" onChange={handleChange} />
+          </li>
+        </ul>
+      </form>
     );
   }
 
   return <ContactForm />;
 }
-
-
-
-
-
-
-
-
-
-//   return (
-//     <div className="form">
-//       <form>
-//         <ul>
-//           <li>
-//             <label>Full Name: </label>
-//             <input
-//               type="text"
-//               value={fullName}
-//               onChange={(e) => setFullName(e.target.value)}
-//             />
-//           </li>
-//           <li>
-//             <label>Post Code: </label>
-//             <input
-//               type="text"
-//               value={postCode}
-//               onChange={(e) => setPostcode(e.target.value)}
-//             />
-//           </li>
-//           <li>
-//             <label>House Number: </label>
-//             <input
-//               type="text"
-//               value={houseNumber}
-//               onChange={(e) => setHouseNumber(e.target.value)}
-//             />
-//           </li>
-//           <li>
-//             <label>Street Name: </label>
-//             <input
-//               type="text"
-//               value={streetName}
-//               onChange={(e) => setStreetName(e.target.value)}
-//             />
-//           </li>
-//           <li>
-//             <label>City: </label>
-//             <input
-//               type="text"
-//               value={city}
-//               onChange={(e) => setCity(e.target.value)}
-//             />
-//           </li>
-//           <li>
-//             <label>Phone Number: </label>
-//             <input
-//               type="text"
-//               value={phoneNumber}
-//               onChange={(e) => setPhoneNumber(e.target.value)}
-//             />
-//           </li>
-//           <li>
-//             <label>Email Address: </label>
-//             <input
-//               type="email"
-//               value={email}
-//               required
-//               onChange={(e) => setEmail(e.target.value)}
-//             />
-//           </li>
-
-//           <li>
-//             <button>Request Design Consultation</button>
-//           </li>
-//           {fullName}
-//         </ul>
-//       </form>
-//     </div>
-//   );
-// }
-
