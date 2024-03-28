@@ -46,6 +46,8 @@ export default function ContactForm() {
 
   const [state, dispatch] = useReducer(reducer, initState);
 
+  // Dispatch function to send data from the form to reducer
+
   function handleChange(event) {
     dispatch({
       type: "CHANGE_FORM_DATA",
@@ -100,10 +102,9 @@ export default function ContactForm() {
         </li>
         <li>
           <button type="submit">Request Design Consultation</button>
-          <p></p> {/* Corrected the empty paragraph tag */}
         </li>
       </ul>
-      {state.isSubmitting && <p>Form Submitting...</p>} {/* Display message when submitting */}
+      {state.isSubmitting && <p>Form Submitting...</p>} 
     </form>
   );
 }
